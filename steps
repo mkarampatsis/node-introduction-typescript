@@ -1,0 +1,40 @@
+https://medium.com/@holasoymalva/how-to-build-a-rest-api-with-node-js-and-typescript-3491ddd19f95
+https://dev.to/realsteveig/nodejs-and-typescript-tutorial-build-a-rest-api-with-typescript-nodejs-and-a-file-based-storage-system-2l61
+https://www.youtube.com/watch?app=desktop&v=b8ZUb_Okxro
+
+1. npm init
+2. npm install -D typescript
+3. npm install -D ts-node
+4. npm install -D nodemon
+5. Create file tsconfig.json
+    {
+      "compilerOptions": {
+        "module": "NodeNext",
+        "moduleResolution": "node",
+        "baseUrl": "src",
+        "outDir": "dist",
+        "sourceMap": true,
+        "noImplicitAny": true
+      },
+      "include": ["src/**/*"]
+    }
+6. Create file nodemon.json
+  {
+    "watch": ["src"],
+    "ext":".ts, .js",
+    "exec":"ts-node ./src/index.ts"
+  }
+7. Create src folder
+8. In src folder create index.ts and write
+  console.log("Hello typescript")
+9. Run with npm run start
+11. npm install express
+12. npm install @types/express
+13. Change to index.ts
+  import express from 'express'
+
+  const app = express();
+
+  app.listen(3000, ()=>{
+    console.log("Server is up and running")
+  })

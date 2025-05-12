@@ -1,0 +1,21 @@
+{
+  "name": "node_introduction",
+  "version": "1.0.0",
+  "description": "node instroduction tutorial",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "markos karampatsis",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.1",
+    "express": "^5.1.0"
+  }
+}
