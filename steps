@@ -38,3 +38,6 @@ https://www.youtube.com/watch?app=desktop&v=b8ZUb_Okxro
   app.listen(3000, ()=>{
     console.log("Server is up and running")
   })
+
+  14. Configure Database MongoDB Atlas, creation of .env file
+  15. npm install mongoose, npm install -D types/mongoose, npm install dotenv

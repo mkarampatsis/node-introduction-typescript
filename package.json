@@ -4,18 +4,22 @@
   "description": "node instroduction tutorial",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon",
+    "start": "ts-node ./src/index.ts",
+    "dev": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "markos karampatsis",
   "license": "ISC",
   "devDependencies": {
+    "@types/mongoose": "^5.11.96",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
   "dependencies": {
     "@types/express": "^5.0.1",
-    "express": "^5.1.0"
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.14.2"
   }
 }
