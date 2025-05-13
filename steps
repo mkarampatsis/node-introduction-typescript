@@ -24,10 +24,20 @@ https://www.youtube.com/watch?app=desktop&v=b8ZUb_Okxro
     "ext":".ts, .js",
     "exec":"ts-node ./src/index.ts"
   }
-7. Create src folder
-8. In src folder create index.ts and write
+7. Add Scripts to package.json
+  Modify the scripts section in your package.json to include the following commands:
+
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "dev": "nodemon",
+    "build": "tsc",
+    "serve": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+8. Create src folder
+9. In src folder create index.ts and write
   console.log("Hello typescript")
-9. Run with npm run start
+10. Run with npm run start
 11. npm install express
 12. npm install @types/express
 13. Change to index.ts
