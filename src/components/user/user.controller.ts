@@ -1,8 +1,8 @@
-import express from 'express'
+import { Request, Response } from 'express';
 import { UserModel } from "./user.schemas";
 
 
-export const getAllUsers = async (req:express.Request, res:express.Response) => {
+export const getAllUsers = async (req:Request, res:Response) => {
   console.log("Get all users");
 
   try {

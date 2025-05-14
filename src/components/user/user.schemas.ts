@@ -34,8 +34,8 @@ let userSchema = new Schema({
     lowercase:true, 
   },
   password: {type: String, required: [true, 'Password is required field'], max: 100},
-  name: {type: String, required: [ true, 'Name is required field' ], max: 100},
-  surname: {type: String, required: [ true, 'Surname is required field' ], max: 100},
+  firstname: {type: String, required: [ true, 'Name is required field' ], max: 100},
+  lastname: {type: String, required: [ true, 'Surname is required field' ], max: 100},
   email: {
     type: String, 
     required: [true, 'Email is required field'], 
@@ -51,7 +51,7 @@ let userSchema = new Schema({
   },
   address: addressSchema,
   phone: { type:[phoneSchema], null: true },
-  roles:{type:[String], null:true},
+  roles:{type: [], ref: 'Role', null:true},
   products: { type: [productSchema], null: true  }
 },
 { 
