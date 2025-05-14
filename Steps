@@ -1,8 +1,33 @@
 https://medium.com/@holasoymalva/how-to-build-a-rest-api-with-node-js-and-typescript-3491ddd19f95
 https://dev.to/realsteveig/nodejs-and-typescript-tutorial-build-a-rest-api-with-typescript-nodejs-and-a-file-based-storage-system-2l61
+
+<!-- One -->
 https://www.youtube.com/watch?app=desktop&v=b8ZUb_Okxro
 https://medium.com/@tericcabrel/create-a-rest-api-with-node-js-express-mongodb-and-typescript-f5887c7f88a6
 https://github.com/tericcabrel/blog-tutorials/tree/main/node-rest-api
+
+<!-- Two -->
+https://www.youtube.com/watch?v=BWUi6BS9T5Y
+https://github.com/TomDoesTech/REST-API-Tutorial-Updated/blob/main/src/service/user.service.ts
+
+<!-- Three -->
+https://www.youtube.com/watch?v=vDLE8hqzA8I
+
+<!-- Four -->
+https://www.youtube.com/watch?v=TbT7eO1fxuI
+https://github.com/TomDoesTech/The-Ultimate-Guide-to-TypeScript-With-Mongoose/blob/main/src/services/user.service.ts
+
+<!-- Fifth -->
+https://github.com/ahmadjoya/typescript-express-mongoose-starter/blob/main/src/controllers/users.controller.ts#L44
+
+<!-- Sixth ** -->
+https://mirzaleka.medium.com/express-js-starter-api-with-typescript-deef5c4b6b70
+
+<!-- Seventh ** -->
+https://ryan-zheng.medium.com/repository-pattern-nodejs-with-mongoose-32d332756257
+
+<!-- Mongoose -->
+https://dev.to/elhamnajeebullah/mongoose-odm-best-practices-part-one-e6e
 
 1. npm init
 2. npm install -D typescript
