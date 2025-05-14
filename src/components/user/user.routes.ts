@@ -1,17 +1,12 @@
 import express from "express";
-// import {
-//   createUser,
-//   getAllUsers,
-//   getUserByEmail,
-//   updateUser,
-//   deleteUser,
-// } from "../controllers/classController.js";
+import { query } from 'express-validator';
+import { getAllUsers, getUserByEmail } from "./user.controller";
 
 const router = express.Router();
 
+router.get("/", getAllUsers);
+router.get("/:email", getUserByEmail);
 // router.post("/", createClass);
-// router.get("/", getAllClasses);
-// router.get("/:id", getClassById);
 // router.put("/:id", updateClass);
 // router.delete("/:id", deleteClass);
 

@@ -79,3 +79,4 @@ https://dev.to/elhamnajeebullah/mongoose-odm-best-practices-part-one-e6e
 
   14. Configure Database MongoDB Atlas, creation of .env file
   15. npm install mongoose, npm install -D types/mongoose, npm install dotenv
+  16. npm install express-validator

@@ -1,15 +1,14 @@
 import { Request, Response } from 'express';
-import { UserModel } from "./user.schemas";
-
+import { find, findOne } from './user.services';
+import { IUser } from './user.interface';
 
 export const getAllUsers = async (req:Request, res:Response) => {
   console.log("Get all users");
 
   try {
-    const result = await UserModel.find();
-    // const result = await userService.findAll();
+    const result = await find();
     console.log('Success in reading all users');
-    res.sendStatus(200).json({ status: true, data: result });
+    res.status(200).json({ status: true, data: result });
     
   } catch (err) {
     res.status(400).json({ status: false, data: err });
@@ -17,27 +16,26 @@ export const getAllUsers = async (req:Request, res:Response) => {
   }
 };
 
-// exports.findOne = async (req, res) => {
+export const getUserByEmail = async (req:Request, res:Response) => {
   
-//   const username = req.params.username;
-//   console.log("Find user with username", username);
+  const email = req.params.email;
+  console.log("Find user with email", email);
 
-//   try {
-//     const result = await User.findOne({ username: username });
-//     // const result = await userService.findOne(username);
+  try {
+    const result = await findOne(email);
 
-//     if (result) {
-//       res.status(200).json({ status: true, data: result });
-//       console.info(`Success in finding user: ${username}`);
-//     } else {
-//       res.status(404).json({ status: true, data: result });
-//       console.info(`User not found: ${username}`);
-//     }
-//   } catch (err) {
-//     res.status(400).json({ status: false, data: err });
-//     console.error(`Problem in finding user: ${username}`);
-//   }
-// };
+    if (result) {
+      console.info(`Success in finding user: ${email}`);
+      res.status(200).json({ status: true, msg: "Success in finding user" });      
+    } else {
+      console.info(`User not found: ${email}`);
+      res.status(404).json({ status: true, msg: "User not found" });
+    }
+  } catch (err) {
+    console.error(`Problem in finding user: ${email}`);
+    res.status(400).json({ status: false, msg: `Problem in finding user: ${err}` });    
+  }
+};
 
 // exports.create = async (req, res) => {
   

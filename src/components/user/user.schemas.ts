@@ -8,8 +8,9 @@ const validateEmail = (email: string) => {
 };
 
 let addressSchema = new Schema({
-  area: { type: String },
-  road: { type: String }
+  street: { type: String },
+  city: { type: String },
+  zipCode: { type: String },
 }, { _id : false });
 
 let phoneSchema = new Schema({
@@ -17,23 +18,7 @@ let phoneSchema = new Schema({
   number: { type: String }
 }, { _id : false });
 
-let productSchema = new Schema({
-  product: { type: String },
-  cost: { type: Number },
-  quantity: { type: Number, required: true },
-  date: { type: Date,  default: Date.now },
-});
-
 let userSchema = new Schema({
-  username: {
-    type: String, 
-    required: [ true, 'Username is required field' ], 
-    max: 100, 
-    unique:true,
-    trim:true,
-    lowercase:true, 
-  },
-  password: {type: String, required: [true, 'Password is required field'], max: 100},
   firstname: {type: String, required: [ true, 'Name is required field' ], max: 100},
   lastname: {type: String, required: [ true, 'Surname is required field' ], max: 100},
   email: {
@@ -49,10 +34,10 @@ let userSchema = new Schema({
       "Email address is not valid",
     ],
   },
+  password: {type: String, required: [true, 'Password is required field'], max: 100},
   address: addressSchema,
   phone: { type:[phoneSchema], null: true },
-  roles:{type: [], ref: 'Role', null:true},
-  products: { type: [productSchema], null: true  }
+  roles:{type: Schema.Types.ObjectId, ref: 'Role', default:"Reader"},
 },
 { 
   collection: 'users',
